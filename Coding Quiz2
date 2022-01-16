@@ -6,7 +6,6 @@ public class QuizSalary {
 		
 		Scanner sc = new Scanner (System.in);
 		double bonus;
-		int age;
 		
 		System.out.print("Please enter your Salary = RM"); 
 		double salary = sc.nextDouble();
@@ -15,30 +14,80 @@ public class QuizSalary {
 		int years = sc.nextInt();
 				
 		if(years>6) {
-			bonus = salary * 0.05;
+			bonus = salary * (0.05);
 			double total = bonus + salary;
 		    System.out.println(total);}
 		else {
 			System.out.println(salary);}
 		
 		
-		int i = 1;
-		while (i<4)
+	    System.out.println("Please enter your salary = RM");
+		double salary1 = sc.nextInt();
+		double salary2 = sc.nextInt();
+		double salary3 = sc.nextInt();
+		
+		System.out.println("Please enter your year of services = ");
+		int year1 = sc.nextInt();
+		int year2 = sc.nextInt();
+		int year3 = sc.nextInt();
+		
+		if((salary1 < salary2) && (salary3 < salary2) ) {
+			System.out.println("The highest is salary2:RM"+ salary2);
 			
-		    System.out.print("Please enter your age ="); 
-		    age = sc.nextInt();
-		    
-		    if (age<50)
+		}
+		else if((salary2 < salary1) && (salary3<salary1)) {
+			System.out.println("The highest is salary1:RM" + salary1);
+		}
+		else if ((salary1<salary3) && (salary2<salary1)) {
+			System.out.println("The highest is salary3:RM" + salary3);
+		}
+
+		if((year2 < year1) && (year3 < year1)) {
+			System.out.println("The longest years of service is employee1:" + year1);
+		}
+		else if ((year3<year2) && (year1<year2)) {
+			System.out.println("The longest years of service is employee2:" + year2);
+		}
+		else if((year1<year3) && (year2<year3)) {
+			System.out.println("The longest years of service is employee3:" + year3);
+		}
+		
+		int i = 1;
+		int age1 = 50;
+		int age2 = 40;
+		int age3 = 30;
+		while (i<4) {
+	    
+		    if ((age1>age2) && (age1>age3))
 		    	System.out.println("You're the oldest employees");
-		    	else if (age>0)
+		    	else if ((age3<age1) && (age3<age2))
 		    		System.out.println("You're the youngest employees");
 		
 	    i++;
-	    
-	    
+		}
 		
-			
+		
 
 	}
 
 }
+
+output
+Please enter your Salary = RM500
+Please enter your year of service = 7
+525.0
+Please enter your salary = RM
+400
+300
+200
+Please enter your year of services = 
+4
+3
+2
+The highest is salary1:RM400.0
+The longest years of service is employee1:4
+You're the oldest employees
+You're the oldest employees
+You're the oldest employees
+
+
