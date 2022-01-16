@@ -26,10 +26,10 @@ public class QuizSalary {
 		double salary2 = sc.nextInt();
 		double salary3 = sc.nextInt();
 		
-		System.out.println("Please enter your year of services = ");
-		int year1 = sc.nextInt();
-		int year2 = sc.nextInt();
-		int year3 = sc.nextInt();
+		System.out.println("Please enter your salary = RM");
+		double Lsalary1 = sc.nextInt();
+		double Lsalary2 = sc.nextInt();
+		double Lsalary3 = sc.nextInt();
 		
 		if((salary1 < salary2) && (salary3 < salary2) ) {
 			System.out.println("The highest is salary2:RM"+ salary2);
@@ -42,14 +42,14 @@ public class QuizSalary {
 			System.out.println("The highest is salary3:RM" + salary3);
 		}
 
-		if((year2 < year1) && (year3 < year1)) {
-			System.out.println("The longest years of service is employee1:" + year1);
+		if((Lsalary1 < Lsalary2) && (Lsalary1 < Lsalary3)) {
+			System.out.println("The lowest is salary1:RM" + Lsalary1);
 		}
-		else if ((year3<year2) && (year1<year2)) {
-			System.out.println("The longest years of service is employee2:" + year2);
+		else if ((Lsalary2<Lsalary1) && (Lsalary2<Lsalary3)) {
+			System.out.println("The lowest is salary2:RM" + Lsalary2);
 		}
-		else if((year1<year3) && (year2<year3)) {
-			System.out.println("The longest years of service is employee3:" + year3);
+		else if((Lsalary3<Lsalary1) && (Lsalary3<Lsalary2)) {
+			System.out.println("The lowest is salary3:RM" + Lsalary3);
 		}
 		
 		int i = 1;
@@ -77,15 +77,15 @@ Please enter your Salary = RM500
 Please enter your year of service = 7
 525.0
 Please enter your salary = RM
-400
 300
 200
-Please enter your year of services = 
-4
-3
-2
-The highest is salary1:RM400.0
-The longest years of service is employee1:4
+100
+Please enter your salary = RM
+300
+200
+100
+The highest is salary1:RM300.0
+The lowest is salary3:RM100.0
 You're the oldest employees
 You're the oldest employees
 You're the oldest employees
